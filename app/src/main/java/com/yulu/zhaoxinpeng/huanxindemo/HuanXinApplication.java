@@ -13,6 +13,10 @@ public class HuanXinApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        //初始化配置本地仓库
+        MyHelper.init(this);
+
         EMOptions options = new EMOptions();
         // 默认添加好友时，是不需要验证的，改成需要验证
         options.setAcceptInvitationAlways(false);

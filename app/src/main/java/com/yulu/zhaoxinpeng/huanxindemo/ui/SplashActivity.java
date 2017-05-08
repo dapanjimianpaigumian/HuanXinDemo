@@ -3,6 +3,8 @@ package com.yulu.zhaoxinpeng.huanxindemo.ui;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.hyphenate.chat.EMClient;
+import com.yulu.zhaoxinpeng.huanxindemo.MyHelper;
 import com.yulu.zhaoxinpeng.huanxindemo.R;
 import com.yulu.zhaoxinpeng.huanxindemo.commons.ActivityUtils;
 import com.yulu.zhaoxinpeng.huanxindemo.ui.user.LoginActivity;
@@ -25,13 +27,15 @@ public class SplashActivity extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                // TODO: 2017/5/3 保存用户登录状态
-                boolean isLogin = true;
-                if (isLogin) {
-                    mActivityUtils.startActivity(LoginActivity.class);
+                if (MyHelper.getLogin()) {
+                    //这两个方法是为了保证进入主页面后本地会话和群组都加载完毕
+                    EMClient.getInstance().groupManager().loadAllGroups();
+                    EMClient.getInstance().chatManager().loadAllConversations();
+
+                    mActivityUtils.startActivity(MainActivity.class);
                     finish();
                 } else {
-                    mActivityUtils.startActivity(RegisterActivity.class);
+                    mActivityUtils.startActivity(LoginActivity.class);
                     finish();
                 }
             }

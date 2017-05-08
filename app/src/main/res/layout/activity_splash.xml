@@ -4,6 +4,7 @@
     android:id="@+id/activity_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/em_splash"
     tools:context="com.yulu.zhaoxinpeng.huanxindemo.ui.SplashActivity">
 
     <TextView

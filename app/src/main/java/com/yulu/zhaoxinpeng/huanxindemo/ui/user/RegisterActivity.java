@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.hyphenate.EMError;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.exceptions.HyphenateException;
+import com.yulu.zhaoxinpeng.huanxindemo.MyHelper;
 import com.yulu.zhaoxinpeng.huanxindemo.R;
 import com.yulu.zhaoxinpeng.huanxindemo.commons.ActivityUtils;
 
@@ -106,8 +107,7 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             pd.dismiss();
-                            // TODO: 2017/5/3 0003 保存用户登录状态
-                            Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
+                            mActivityUtils.showToast("注册成功");
                             //跳转到登录页面
                             finish();
                         }
