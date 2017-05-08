@@ -12,9 +12,8 @@ import com.yulu.zhaoxinpeng.huanxindemo.ui.user.RegisterActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
 /**
- * 欢迎页
+ * 开屏界面
  */
 public class SplashActivity extends AppCompatActivity {
 

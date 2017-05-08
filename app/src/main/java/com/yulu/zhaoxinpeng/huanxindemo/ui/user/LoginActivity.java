@@ -21,7 +21,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-
+/**
+ * 登录界面
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private Handler mHandler=new Handler(){

@@ -21,7 +21,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-
+/**
+ * 注册界面
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     @BindView(R.id.username)
