@@ -1,0 +1,7 @@
+2017/5/10
+Error:Execution failed for task ':app:transformClassesWithDexForDebug'. 重复引用依赖错误
+> com.android.build.api.transform.TransformException: com.android.ide.common.process.ProcessException:
+java.util.concurrent.ExecutionException: com.android.dex.DexException: Multiple dex files define
+Lcom/google/android/gms/common/data/Freezable;
+
+http://blog.csdn.net/hyr83960944/article/details/41825087
