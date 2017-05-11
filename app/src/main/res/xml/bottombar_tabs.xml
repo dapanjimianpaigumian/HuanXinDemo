@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+
+    <tab
+        icon="@drawable/em_tab_chat_bg"
+        id="@+id/tab_chat"
+        title="聊天" />
+    <tab
+        icon="@drawable/em_tab_contact_list_bg"
+        id="@+id/tab_contact_list"
+        title="通讯录" />
+    <tab
+        icon="@drawable/em_tab_setting_bg"
+        id="@+id/tab_setting"
+        title="设置" />
+
+</tabs>

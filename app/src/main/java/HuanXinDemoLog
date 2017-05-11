@@ -1,7 +1,15 @@
 2017/5/10
-Error:Execution failed for task ':app:transformClassesWithDexForDebug'. 重复引用依赖错误
-> com.android.build.api.transform.TransformException: com.android.ide.common.process.ProcessException:
-java.util.concurrent.ExecutionException: com.android.dex.DexException: Multiple dex files define
-Lcom/google/android/gms/common/data/Freezable;
+1. 导入easeui module时，出现下面错误：重复引用依赖错误
+   Error:Execution failed for task ':app:transformClassesWithDexForDebug'.
+   > com.android.build.api.transform.TransformException: com.android.ide.common.process.ProcessException:
+   java.util.concurrent.ExecutionException: com.android.dex.DexException: Multiple dex files define
+   Lcom/google/android/gms/common/data/Freezable;
 
+   解决方法：1.检视引入的module的依赖与app模块的依赖是否重复；
+            2.删除重复依赖。
+2. 底部导航栏使用Bottombar后，点击输入框，会把Bottombar也顶起来！
+   解决方法：在配置文件中找到导航栏所在的activity节点:
+            设置：android:windowSoftInputMode="adjustPan"就行了
+3. Android SDK导入 流程：
+   1> 集成安坠
 http://blog.csdn.net/hyr83960944/article/details/41825087
